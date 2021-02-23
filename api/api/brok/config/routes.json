@@ -47,6 +47,14 @@
       "config": {
         "policies": []
       }
+    },
+    {
+      "method": "POST",
+      "path": "/broks/:id/inc",
+      "handler": "brok.inc",
+      "config": {
+        "policies": []
+      }
     }
   ]
 }

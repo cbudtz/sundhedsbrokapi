@@ -5,4 +5,13 @@
  * to customize this controller
  */
 
-module.exports = {};
+module.exports = {
+  async inc(ctx) {
+    let result = await strapi
+      .query('brok')
+      .model.query(qb=>{
+        qb.where('id',1).increment('likes',1);
+      }).fetch();
+    return result.toJSON();
+  }
+};

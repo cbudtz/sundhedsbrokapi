@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "broks",
   "info": {
-    "name": "brok"
+    "name": "brok",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -15,7 +16,10 @@
     },
     "text": {
       "type": "text"
+    },
+    "likes": {
+      "type": "biginteger",
+      "default": "0"
     }
   }
 }
-
