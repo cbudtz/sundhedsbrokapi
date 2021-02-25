@@ -10,7 +10,7 @@ module.exports = {
     let result = await strapi
       .query('brok')
       .model.query(qb=>{
-        qb.where('id',1).increment('likes',1);
+        qb.where('id',ctx.params.id).increment('likes',1);
       }).fetch();
     return result.toJSON();
   }
